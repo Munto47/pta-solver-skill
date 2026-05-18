@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/code)
 [![中文文档](https://img.shields.io/badge/文档-中文-red)](README.zh-CN.md)
+[![skills.sh](https://img.shields.io/badge/skills.sh-pta--solver-green)](https://skills.sh/Munto47/pta-solver-skill)
 
 > [切换中文文档 →](README.zh-CN.md)
 
@@ -12,16 +13,19 @@ and submit — all through natural language conversation.
 
 ## Quick Install
 
-### Via Claude Code (after registry publication)
-
-```
-/find-skills pta-solver
-```
-
-### Via npx skills (works now)
+### Via npx skills (recommended)
 
 ```bash
 npx skills add https://github.com/Munto47/pta-solver-skill -g -y
+```
+
+Visit [skills.sh/Munto47/pta-solver-skill](https://skills.sh/Munto47/pta-solver-skill)
+for the skill page with security audit and install stats.
+
+### Via Claude Code
+
+```
+/find-skills pta-solver
 ```
 
 ### Manual install

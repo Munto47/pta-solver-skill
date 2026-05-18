@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/code)
 [![English Docs](https://img.shields.io/badge/Docs-English-blue)](README.md)
+[![skills.sh](https://img.shields.io/badge/skills.sh-pta--solver-green)](https://skills.sh/Munto47/pta-solver-skill)
 
 > [Switch to English →](README.md)
 
@@ -11,16 +12,19 @@ PTA（pintia.cn）算法题自动求解技能。基于 **Playwright MCP** 浏览
 
 ## 快速安装
 
-在 Claude Code 中直接输入：
-
-```
-/find-skills pta-solver
-```
-
-即可自动发现并安装。也可以通过 `npx skills` 命令行安装：
+### 通过 npx skills（推荐）
 
 ```bash
 npx skills add https://github.com/Munto47/pta-solver-skill -g -y
+```
+
+访问 [skills.sh/Munto47/pta-solver-skill](https://skills.sh/Munto47/pta-solver-skill)
+查看技能页面（含安全审计和安装统计）。
+
+### 通过 Claude Code
+
+```
+/find-skills pta-solver
 ```
 
 ## 其他安装方式

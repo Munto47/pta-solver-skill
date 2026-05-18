@@ -1,10 +1,13 @@
 ---
 name: pta-solver
 description: |
-  Automated PTA (pintia.cn) problem set solver. Navigates problem sets, reads
-  problem descriptions, writes C++ solutions locally, pastes code via clipboard
-  into CodeMirror 6 editors, and submits. Handles login, language switching (C++ g++),
-  and result verification. Triggered by user providing a PTA problem set URL.
+  Automated PTA (pintia.cn) problem set solver for Claude Code. Navigates problem
+  sets, reads algorithm and data structure problem descriptions, writes C++ solutions
+  locally, pastes code via clipboard into CodeMirror 6 editors, and submits answers.
+  Handles login, language switching (C++ g++), and result verification. Supports
+  brute force, divide & conquer, dynamic programming, greedy, graph (BFS DFS Dijkstra),
+  string (KMP), math, backtracking, and bit manipulation algorithms. Triggered by
+  user providing a PTA problem set URL.
 metadata:
   trigger:
     - "pintia.cn/problem-sets"
@@ -13,6 +16,9 @@ metadata:
     - "完成这道题"
     - "提交代码"
     - "算法设计与分析"
+    - "algorithm problem"
+    - "competitive programming"
+    - "自动刷题"
 ---
 
 # PTA Problem Set Solver
