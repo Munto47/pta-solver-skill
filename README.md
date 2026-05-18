@@ -12,49 +12,34 @@ and submit — all through natural language conversation.
 
 ## Quick Install
 
-In Claude Code, just run:
+### Via Claude Code (after registry publication)
 
 ```
 /find-skills pta-solver
 ```
 
-That's it. Claude Code will discover and install the skill automatically.
+### Via npx skills (works now)
 
-## Alternative Install Methods
+```bash
+npx skills add https://github.com/Munto47/pta-solver-skill -g -y
+```
 
-**Method 1: Git clone (recommended for contributors)**
+### Manual install
 
 ```bash
 git clone https://github.com/Munto47/pta-solver-skill.git
-# The skill file pta-solver.md goes into your project's .claude/skills/ directory
-# Copy it to any Claude Code project you want to use it in:
 cp pta-solver.md /path/to/your-project/.claude/skills/
 ```
 
-**Method 2: Direct download**
-
-Download `pta-solver.md` from the [releases page](https://github.com/Munto47/pta-solver-skill/releases)
-and place it in your project's `.claude/skills/` directory.
-
-**Method 3: Manual placement**
-
-```bash
-# Per-project install
-mkdir -p .claude/skills
-cp pta-solver.md .claude/skills/
-
-# Or global install (available in all projects)
-mkdir -p ~/.claude/skills
-cp pta-solver.md ~/.claude/skills/
-```
+Or download `pta-solver.md` directly from the [releases page](https://github.com/Munto47/pta-solver-skill/releases).
 
 ## Requirements
 
 - **Claude Code** (any recent version)
 - **Playwright MCP** server configured in your Claude Code settings
 
-If you haven't set up Playwright MCP yet, see the
-[Playwright MCP setup guide](https://github.com/anthropics/claude-code/tree/main/mcp).
+If you haven't set up Playwright MCP yet, follow the
+[Playwright MCP Setup Guide](docs/playwright-mcp-setup.md).
 
 ## What This Skill Does
 
@@ -107,9 +92,12 @@ with:
 The skill registry may need time to index. As a workaround, use the manual install methods above.
 
 ### "Playwright MCP not configured"
-This skill requires the Playwright MCP server. Install it via:
+This skill requires the Playwright MCP server. See the full
+[Playwright MCP Setup Guide](docs/playwright-mcp-setup.md) for step-by-step
+instructions. Quick install:
 ```bash
-npm install -g @anthropic/mcp-playwright
+npm install -g @playwright/mcp
+npx playwright install chromium
 ```
 Then add it to your Claude Code MCP configuration.
 
@@ -127,12 +115,21 @@ fails, ensure the browser window has focus during execution.
 
 ```
 pta-solver-skill/
-  pta-solver.md          # Main skill definition
-  SKILL.md               # Skill registry entry point
-  README.md              # This file
-  LICENSE                # MIT
-  .claude/skills/        # Bundled install target
+  pta-solver.md                       # Main skill definition
+  SKILL.md                            # skills.sh registry entry point
+  README.md                           # This file (English)
+  README.zh-CN.md                     # Chinese documentation
+  LICENSE                             # MIT
+  docs/
+    playwright-mcp-setup.md           # Playwright MCP configuration guide
+    publish-to-skills-sh.md           # How to publish to skills.sh registry
+  .claude/skills/                     # Bundled install target
 ```
+
+## Publishing to skills.sh
+
+To make this skill discoverable via `/find-skills` and `npx skills find`,
+follow the [Publishing to skills.sh Guide](docs/publish-to-skills-sh.md).
 
 ## Author
 
