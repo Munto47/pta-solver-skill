@@ -2,6 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/code)
+[![中文文档](https://img.shields.io/badge/文档-中文-red)](README.zh-CN.md)
+
+> [切换中文文档 →](README.zh-CN.md)
 
 Automated PTA (pintia.cn) problem set solver skill for Claude Code. Uses **Playwright MCP**
 browser automation to navigate problem sets, paste solutions into CodeMirror 6 editors,
